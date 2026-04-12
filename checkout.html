@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Velvet Crumb Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+
+    <nav class="navbar light-nav cozy-nav">
+        <div class="logo dark-logo">Velvet Crumb</div>
+    
+        <button class="menu-toggle dark-toggle" id="menu-toggle" aria-label="Open menu">
+            ☰
+        </button>
+    
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-links dark-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Menu</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+    
+            <a href="checkout.html" class="cart-link dark-cart">
+                Cart <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="section checkout-section">
+        <p class="checkout-subtitle">Sweet little details for your order</p>
+        <h1 class="checkout-title">Cozy Checkout</h1>
+
+        <div class="checkout-layout">
+            <div class="cart-panel cozy-panel">
+                <h2>Your Sweet Cart</h2>
+                <div id="cart-items"></div>
+                <div class="cart-summary">
+                    <p>Subtotal: <span id="cart-total">$0</span></p>
+                </div>
+            </div>
+
+            <form class="checkout-form cozy-form" onsubmit="placeOrder(event)">
+                <h2>Customer Information</h2>
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="address" placeholder="Delivery Address" required>
+
+                <select id="payment" required>
+                    <option value="">Select Payment Method</option>
+                    <option>Credit Card</option>
+                    <option>Debit Card</option>
+                    <option>Cash on Delivery</option>
+                </select>
+
+                <textarea id="notes" rows="4" placeholder="Special order notes"></textarea>
+
+                <button type="submit" class="btn full-btn cozy-btn">Place Sweet Order</button>
+                <p id="order-message" class="order-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

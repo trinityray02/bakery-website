@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Crumb Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">Velvet Crumb</div>
+        
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#products">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+        
+                <a href="checkout.html" class="cart-link">
+                    Cart <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">Artisan Bakery Collection</p>
+            <h1>Luxury Desserts for Beautiful Moments</h1>
+            <p>
+                Elegant cakes, handcrafted pastries, and premium sweets made to turn every celebration
+                into something unforgettable.
+            </p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <section class="section intro" id="about">
+        <h2>Crafted with Elegance</h2>
+        <p>
+            At Velvet Crumb, every dessert is designed with detail, flavor, and presentation in mind.
+            We believe luxury should taste as beautiful as it looks.
+        </p>
+    </section>
+
+    <section class="display-section">
+        <img src="display.jpg" alt="Bakery Display">
+    </section>
+
+    <section class="section products" id="products">
+        <h2>Featured Desserts</h2>
+
+        <div class="product-grid">
+
+            <div class="card">
+                <img src="cake.jpg" alt="Signature Cake">
+                <div class="card-body">
+                    <h3>Signature Cake</h3>
+                    <p>Layered vanilla cake with silky buttercream and elegant finishing details.</p>
+                    <div class="product-row">
+                        <span class="price">$45</span>
+                        <button onclick="addToCart('Signature Cake', 45)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="cakepop.jpg" alt="Cake Pops">
+                <div class="card-body">
+                    <h3>Cake Pops</h3>
+                    <p>Delicious bite-sized cake pops coated in chocolate and decorated beautifully.</p>
+                    <div class="product-row">
+                        <span class="price">$15</span>
+                        <button onclick="addToCart('Cake Pops', 15)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="tart.jpg" alt="Strawberry Tart">
+                <div class="card-body">
+                    <h3>Strawberry Tart</h3>
+                    <p>Fresh strawberries, vanilla cream, and a buttery tart shell.</p>
+                    <div class="product-row">
+                        <span class="price">$18</span>
+                        <button onclick="addToCart('Strawberry Tart', 18)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="macaron.jpg" alt="Macaron Box">
+                <div class="card-body">
+                    <h3>Macaron Box</h3>
+                    <p>A delicate box of premium macarons in assorted flavors.</p>
+                    <div class="product-row">
+                        <span class="price">$24</span>
+                        <button onclick="addToCart('Macaron Box', 24)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="dessertbox.jpg" alt="Mini Dessert Box">
+                <div class="card-body">
+                    <h3>Mini Dessert Box</h3>
+                    <p>An elegant assortment of mini desserts for gifting or events.</p>
+                    <div class="product-row">
+                        <span class="price">$30</span>
+                        <button onclick="addToCart('Mini Dessert Box', 30)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="cupcake.jpg" alt="Rose Petal Cupcakes">
+                <div class="card-body">
+                    <h3>Rose Petal Cupcakes</h3>
+                    <p>Soft cupcakes topped with rose-inspired buttercream swirls.</p>
+                    <div class="product-row">
+                        <span class="price">$20</span>
+                        <button onclick="addToCart('Rose Petal Cupcakes', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Velvet Crumb Bakery. Luxury in every bite.</p>
+    </footer>
+    <div id="cute-popup" class="cute-popup">
+        <p id="popup-text"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
